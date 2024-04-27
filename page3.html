@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>page no3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<style>
+
+</style>
+
+<script>
+<!-- input:invalid {
+  <!-- background-color: grey;
+//}
+
+//form:invalid button[type="button"] {
+  //opacity: 0.5;
+//} -->
+ -->
+  function checkform()
+    {
+        var f = document.forms["theform"].elements;
+        var cansubmit = true;
+
+        for (var i = 0; i < f.length; i++) {
+            if (f[i].value.length == 0) cansubmit = false;
+        }
+
+        if (cansubmit) {
+            document.getElementById('submitbutton').disabled = false;
+        }
+    }
+
+function validation(valueid,errorid)
+{
+var val=document.getElementById(valueid).value;
+
+
+if (val=="")
+{
+document.getElementById(errorid).innerHTML="Mandatory Field-Please Enter Value";
+}
+else{
+
+document.getElementById(errorid).innerHTML="";
+
+}
+
+}
+//1
+function validation(value_id,error_id)
+{
+var fname=document.getElementById(value_id).value;
+//var fname1=document.getElementById(valueid).value;
+
+
+if (fname=="")
+{
+document.getElementById(error_id).innerHTML="Mandatory Field-Please Enter Value";
+}
+
+else{
+
+document.getElementById(error_id).innerHTML="";
+
+}
+
+}
+
+function validation1(valueid,errorid)
+{
+var lname=document.getElementById(valueid).value;
+//var fname1=document.getElementById(valueid).value;
+
+
+if (lname=="")
+{
+document.getElementById(errorid).innerHTML="Mandatory Field-Please Enter Value";
+}
+
+else{
+
+document.getElementById(errorid).innerHTML="";
+
+}
+
+}
+
+function validation2(valueid,errorid)
+{
+var lname=document.getElementById(valueid).value;
+//var fname1=document.getElementById(valueid).value;
+
+
+if (lname=="")
+{
+document.getElementById(errorid).innerHTML="Mandatory Field-Please Enter Value";
+}
+
+else{
+
+document.getElementById(errorid).innerHTML="";
+
+}
+
+}
+
+function validation3(valueid,errorid)
+{
+var lname=document.getElementById(valueid).value;
+//var fname1=document.getElementById(valueid).value;
+
+
+if (lname=="")
+{
+document.getElementById(errorid).innerHTML="Mandatory Field-Please Enter Value";
+}
+
+else{
+
+document.getElementById(errorid).innerHTML="";
+
+}
+
+}
+
+function validation4(valueid,errorid)
+{
+var lname=document.getElementById(valueid).value;
+//var fname1=document.getElementById(valueid).value;
+
+
+if (lname=="")
+{
+document.getElementById(errorid).innerHTML="Mandatory Field-Please Enter Value";
+}
+
+else{
+
+document.getElementById(errorid).innerHTML="";
+
+}
+
+}
+
+
+
+</script>
+
+<body style="background-color:#E5E7E9;">
+<nav class="navbar navbar-expand-sm " style="background-color:#138D75;">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src="gt.png" alt="logo" style="width:50px;height:30px;">
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <h6 style="color:white; margin-left:5px;">Gaddiel Technologies Private Limited</h6>
+    </li>
+	<li class="nav-item">
+     <a href="#" <h6 style="color:white;margin-left:600px; ">dhakshina008@gmail.com</h6></a>
+    <img src="man1.png"/>
+	</li>
+		<li class="nav-item">
+     <a href="#" <h6 id="one" style="color:white; margin-left:100px;">Home</h6></a>
+    </li>
+  </ul>
+</nav>
+</div> 
+<br>
+
+ 
+<div class="container" width="500px;" style="background-color:white; height:150px;">
+<br>
+ <br>
+ <div class="row" >
+ 
+ 
+     <div class="col-6" >
+	     <div class="row" style="border: 1px solid #138D75; margin-left:5px;">
+		     <div class="col-12" >
+			    <h6 style="text-align:center;">Name:<span style="color:grey;">dhakshina</span></h6>
+			 </div>
+			 <div class="row" style="margin-left:0px;" >
+			     <div class="col-6" style="border: 1px solid #138D75; width:395px; ">
+				    <h6 style="text-align:center;">Shift:<span style="color:grey;">B</span></h6>
+				 </div>
+				 <div class="col-6" style="border: 1px solid #138D75;">
+				 
+				 <h6 style="text-align:center;">Date:<span style="color:grey;">01/12/2022</span></h6>
+				 </div>
+			 
+			 </div>
+		 
+		 </div>
+     
+     </div>
+ </div>
+</div> 
+<br>
+ 
+<div class="container" style="background-color:white; height:610px;">
+<br>
+<div class="row" style="margin-left:5px; ">
+   <div class="col-6">
+   <form name="theform">
+      <div class="row">
+	  
+	    <h6>barcode*</h6>
+	    <input type="text" id="barcode" onKeyup="checkform()" onblur="validation('barcode','firsterror')" class="form-control" style="border:1px solid #138D75;">
+        <span style="color:red;  font-size:12px;" id="firsterror"></span></input>
+	  </div>
+	  <br>
+	   <div class="row">
+	    <h6>Product Name</h6>
+	    <input type="text" id="productname" onKeyup="checkform()" onblur="validation1('productname','seconderror')" class="form-control" style="border:1px solid #138D75;">
+        <span style="color:red;  font-size:12px;" id="seconderror"></span></input>
+	  </div>
+	  <br>
+	  <div class="row">
+	    <h6>Grade</h6>
+	    <input type="text"   id="grade" onKeyup="checkform()" onblur="validation2('grade','thirderror')" class="form-control" style="border:1px solid #138D75;"/>
+        <span style="color:red;  font-size:12px;" id="thirderror"></span>
+	  </div> 
+	  <br>
+	  <div class="row">
+	    <h6>Type</h6>
+	    <input type="text" id="type1" onKeyup="checkform()" onblur="validation3('type1','fourtherror')" class="form-control" style="border:1px solid #138D75;"/>
+        <span style="color:red;  font-size:12px;" id="fourtherror"></span>
+	  </div>
+	  <br>
+	  <div class="row">
+	    <h6>Lot#</h6>
+	    <input type="text" id="lot" onKeyup="checkform()" class="form-control" onblur="validation4('lot','fivtherror')" style="border:1px solid #138D75;"/>
+         <span style="color:red;  font-size:12px;" id="fivtherror"></span>
+	  </div>
+	  <br>
+	  <a href="page4.html"> <button class="btn open-button" id="submitbutton"  type="button" disabled="disabled" onclick="button()" value="Submit" style="background-color:#138D75;  text-align:center; width:300px;margin-left:100px; color:white;">SUBMIT</button>
+      </a>
+	  <br><br>
+	  <br>
+	  </form>
+   </div>
+   
+  
+  
+
+</div>
+
+
+
+</div>
+
+<br>
+
+</body>
+
+
+
+
+
+
+</html>

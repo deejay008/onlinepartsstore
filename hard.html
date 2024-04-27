@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> login-page   </title>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color:lightgrey;
+}
+
+section {
+    width: 90%;
+    height: 100vh;
+    position: relative;
+    background-color: ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 270px;
+    background-color:#138D75;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section form {
+    position: absolute;
+    z-index: 1;
+}
+
+.form-control {
+    
+    border: 2px solid #138D75;
+    color: grey;
+	
+}
+.form-control:focus{
+    box-shadow:0 0 0 0;
+    border: 2px solid #138D75;
+}
+
+
+
+
+.btn {
+    background-color: #138D75;
+    border: none;
+    font-size: 1.25em;
+}
+
+
+.btn:focus {
+    box-shadow: 0 0 0 0.25rem #138D75;
+}
+
+.titlename{
+   float:left;
+   font-size:15px;
+}
+
+<!--popup-->
+
+
+</style>
+
+<script>
+//email password vaildation
+function validation(valueid,errorid)
+{
+var fname=document.getElementById(valueid).value;
+
+
+if (fname=="")
+{
+document.getElementById(errorid).innerHTML="Mandatory Field-Please Enter Value";
+}
+else{
+
+document.getElementById(errorid).innerHTML="";
+
+}
+
+}
+
+
+
+</script>
+
+
+
+<body>
+<div>
+ <section>
+        <div class="top"></div>
+        <form class="col-lg-3 col-md-7 col-sm-8 col-10 shadow bg-white p-5 text-center">
+            <h1 class="mb-5" style="font-size:20px;"><img src="man.png" width="30px" />SIGN IN<br><hr color="grey"></h1>
+			
+			<label class="titlename">Email id*</label>
+            <input type="text" id="fname" onblur="validation('fname','firsterror')" class="form-control my-4 rounded-0 p-0" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email'">
+			<span style="color:red;  font-size:12px;" id="firsterror"></span></input>
+			<br>
+			<label class="titlename">Password*</label>
+   		    <input type="password" id="lname" onblur="validation('lname','seconderror')" class="form-control my-4 rounded-0 p-0" placeholder="Enter Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter password'">
+            <span style="color:red;  font-size:12px;" id="seconderror"></span></input>
+			<button class="btn text-white text-uppercase rounded-0 mt-1 mb-4 btn-block" style="font-size:15px;"><img src="enter.png" width="20px" /> SIGN IN</button>
+            
+          
+         
+        </form>
+    </section>
+
+  </div> 
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

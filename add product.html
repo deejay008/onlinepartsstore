@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>add product</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<style>
+
+#myfile{
+border-radius:5px;
+border:1px solid #138D75;
+padding:5px;
+width:500px;
+height:40px;
+}
+
+.colcolor{
+
+border:1px solid #138D75;
+height:50px;
+}
+
+</style>
+
+<script>
+
+</script>
+
+
+<body style="background-color:#E5E7E9;">
+<nav class="navbar navbar-expand-sm " style="background-color:#138D75;">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src="gt.png" alt="logo" style="width:50px;height:30px;">
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <h6 style="color:white; margin-left:5px;">Gaddiel Technologies Private Limited</h6>
+    </li>
+	<li class="nav-item">
+     <a href="#" <h6 style="color:white;margin-left:600px; ">dhakshina008@gmail.com</h6></a>
+    <img src="man1.png"/>
+	</li>
+		<li class="nav-item">
+     <a href="#" <h6 style="color:white; margin-left:100px;">Home</h6></a>
+    </li>
+  </ul>
+</nav>
+</div> 
+<br>
+
+<div class="container" style="background-color:white; height:600px;">
+<div class="row">
+  <div class="col-4">
+      <h5>Add Product</h5>
+	  <div class="container">
+         <div class="row">
+		    <h6>Product Name</h6>
+	        <input type="text" id="productname" onKeyup="checkform()" onblur="validation1('productname','seconderror')" class="form-control" style="border:1px solid #138D75;">
+            <span style="color:red;  font-size:12px;" id="seconderror"></span></input>
+		 </div>
+		<div class="row">
+		    <h6>barcode*</h6>
+	        <input type="text" id="barcode" onKeyup="checkform()" onblur="validation('barcode','firsterror')" class="form-control" style="border:1px solid #138D75;">
+            <span style="color:red;  font-size:12px;" id="firsterror"></span></input>
+		</div>
+		<div class="row">
+		    <h6>Grade</h6>
+			  <select class="form-control" style="border:1px solid #138D75;" name="Country" id="dropdown">
+	               <option value="">Select Grade</option>
+		           <option>grade A</option>
+                   <option>grade B</option>
+                   <option>grade C</option>
+                   <option>grade D</option>
+               </select>
+		    </div>
+		<div class="row">
+		    <h6>Type</h6>
+			  <select class="form-control" style="border:1px solid #138D75;"  name="Country" id="dropdown">
+	               <option value="">select type</option>
+		           <option>grade A</option>
+                   <option>grade B</option>
+                   <option>grade C</option>
+                   <option>grade D</option>
+               </select>
+		    </div>
+		<div class="row">
+		   <label>Product Image</label>
+           <input type="file" id="myfile" name="myfile" multiple><br><br>
+		
+		</div>
+		</div>
+		</div>
+	<div class="col-8" >
+	<br>
+	  <!--<div class="navbar" style="background-color:#138D75; width:100%; height:50px;">
+	    --><div class="container">
+		<div class="row"style="background-color:#138D75; height:40px;">
+	
+		   <div class="col-4" >
+		     <h6>Reason</h6>
+		   </div>
+		   <div class="col-4">
+		     <h6>Defect Image</h6>
+		   </div>
+		   <div class="col-4">
+		     <h6>Compertive Image</h6>
+		   </div>
+		
+		</div>
+		
+         
+	    <div class="row">
+		
+		   <div class="col-lg-4 colcolor" >
+		   
+		    &nbsp;<input id="check" name="checkbox"  type="checkbox">&nbsp;&nbsp;crack
+		    </input>
+			
+		  </div>
+		  <div class="col-lg-4 colcolor" >
+		  
+		  </div>
+		  <div class="col-lg-4 colcolor">
+		  
+		  </div>
+		
+		</div>
+		<div class="row">
+		
+		   <div class="col-lg-4 colcolor" >
+		   
+		    &nbsp;<input id="check" name="checkbox"  type="checkbox">&nbsp;&nbsp;edge cutting
+		    </input>
+			
+		  </div>
+		  <div class="col-lg-4 colcolor" >
+		  
+		  </div>
+		  <div class="col-lg-4 colcolor">
+		  
+		  </div>
+		
+		</div>
+		
+		<div class="row">
+		
+		   <div class="col-lg-4 colcolor" >
+		   
+		    &nbsp;<input id="check" name="checkbox"  type="checkbox">&nbsp;&nbsp;pin damage
+		    </input>
+			
+		  </div>
+		  <div class="col-lg-4 colcolor" >
+		  
+		  </div>
+		  <div class="col-lg-4 colcolor">
+		  
+		  </div>
+		
+		</div>
+		<div class="row">
+		
+		   <div class="col-lg-4 colcolor" >
+		   
+		    &nbsp;<input id="check" name="checkbox"  type="checkbox">&nbsp;&nbsp;print offset
+		    </input>
+			
+		  </div>
+		  <div class="col-lg-4 colcolor" >
+		  
+		  </div>
+		  <div class="col-lg-4 colcolor">
+		  
+		  </div>
+		
+		</div>
+		<div class="row">
+		
+		   <div class="col-lg-4 colcolor" >
+		   
+		    &nbsp;<input id="check" name="checkbox"  type="checkbox">&nbsp;&nbsp;PRODUCT TESTING1
+		    </input>
+			
+		  </div>
+		  <div class="col-lg-4 colcolor" >
+		  
+		  </div>
+		  <div class="col-lg-4 colcolor">
+		  
+		  </div>
+		
+		</div>
+		<div class="row">
+		
+		   <div class="col-lg-4 colcolor" >
+		   
+		    &nbsp;<input id="check" name="checkbox"  type="checkbox">&nbsp;&nbsp;PRODUCT TESTING2
+		    </input>
+			
+		  </div>
+		  <div class="col-lg-4 colcolor" >
+		  
+		  </div>
+		  <div class="col-lg-4 colcolor">
+		  
+		  </div>
+		
+		</div>
+		<div class="row">
+		
+		   <div class="col-lg-4 colcolor" >
+		   
+		    &nbsp;<input id="check" name="checkbox"  type="checkbox">&nbsp;&nbsp;raw material clot
+		    </input>
+			
+		  </div>
+		  <div class="col-lg-4 colcolor" >
+		  
+		  </div>
+		  <div class="col-lg-4 colcolor">
+		  
+		  </div>
+		
+		</div>
+		<div class="row">
+		
+		   <div class="col-lg-4 colcolor" >
+		   
+		    &nbsp;<input id="check" name="checkbox"  type="checkbox">&nbsp;&nbsp;slot missing
+		    </input>
+			
+		  </div>
+		  <div class="col-lg-4 colcolor" >
+		  
+		  </div>
+		  <div class="col-lg-4 colcolor">
+		  
+		  </div>
+		
+		</div>
+		
+	</div>
+    </div>	
+
+
+</div>
+<br><br><br>
+  <div class="row">
+   <div class="col-8" >
+   <span></span>
+   </div>
+    <div class="col-2" >
+	<button style="width:100px;  background-color:#424949; color:white;" ><span><img src="d.png"style="width:20px;"/><span>cancel</button>
+	</div>
+	<div class="col-2">
+	<button style="width:100px; background-color:#138D75; color:white; border:1px solid #138D75;"><img src="tick.png"style="width:25px;"/>save</button>
+	
+	</div>
+   
+  </div>
+ 
+</div>
+<br>
+</body>
+</html>
